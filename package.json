@@ -1,0 +1,22 @@
+{
+  "name": "static-server",
+  "version": "1.0.0",
+  "description": "基于koa2的静态文件服务，并带有请求转发",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./src/index.js"
+  },
+  "keywords": [
+    "koa2",
+    "node",
+    "static"
+  ],
+  "author": "jeffrey.liu",
+  "license": "ISC",
+  "dependencies": {
+    "koa": "^2.13.1",
+    "koa-proxies": "^0.12.1",
+    "koa-send": "^5.0.1",
+    "koa-static": "^5.0.0"
+  }
+}
