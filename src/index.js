@@ -8,7 +8,7 @@ const { clearConsole } = require('./util')
 
 const app = new Koa()
 const port = 3000
-const staticPath = path.resolve(__dirname, 'public')
+const staticPath = path.resolve(process.cwd(), 'public')
 
 // 请求代理
 app.use(KoaProxy('/api', {
@@ -17,7 +17,7 @@ app.use(KoaProxy('/api', {
 }))
 
 // 静态文件服务
-app.use(KoaStatic(staticPath, { root: staticPath }))
+app.use(KoaStatic(staticPath))
 
 // 转发配置
 const rewriteConfigs = [
